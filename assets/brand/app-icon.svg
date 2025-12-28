@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Primary Gradient - Electric Blue to Cosmic Purple -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+
+    <!-- AI Glow Gradient -->
+    <linearGradient id="aiGlowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4"/>
+      <stop offset="50%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+
+    <!-- Background Gradient - Deep Navy -->
+    <linearGradient id="bgGradient" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#141821"/>
+      <stop offset="100%" style="stop-color:#0A0E17"/>
+    </linearGradient>
+
+    <!-- Radial glow for center -->
+    <radialGradient id="centerGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#0A0E17;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Glow Filter for R -->
+    <filter id="rGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Stronger glow for AI node -->
+    <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1024" height="1024" fill="url(#bgGradient)"/>
+
+  <!-- Subtle radial glow -->
+  <rect width="1024" height="1024" fill="url(#centerGlow)"/>
+
+  <!-- Neural Network Background Pattern -->
+  <g opacity="0.12">
+    <!-- Top area -->
+    <circle cx="150" cy="180" r="6" fill="#3B82F6"/>
+    <circle cx="220" cy="140" r="4" fill="#8B5CF6"/>
+    <circle cx="180" cy="250" r="5" fill="#06B6D4"/>
+    <line x1="150" y1="180" x2="220" y2="140" stroke="#3B82F6" stroke-width="1"/>
+    <line x1="150" y1="180" x2="180" y2="250" stroke="#06B6D4" stroke-width="1"/>
+
+    <circle cx="850" cy="160" r="5" fill="#3B82F6"/>
+    <circle cx="880" cy="220" r="4" fill="#8B5CF6"/>
+    <circle cx="800" cy="200" r="6" fill="#06B6D4"/>
+    <line x1="850" y1="160" x2="880" y2="220" stroke="#8B5CF6" stroke-width="1"/>
+    <line x1="850" y1="160" x2="800" y2="200" stroke="#3B82F6" stroke-width="1"/>
+
+    <!-- Bottom area -->
+    <circle cx="170" cy="820" r="4" fill="#3B82F6"/>
+    <circle cx="240" cy="860" r="6" fill="#8B5CF6"/>
+    <circle cx="200" cy="780" r="5" fill="#06B6D4"/>
+    <line x1="170" y1="820" x2="240" y2="860" stroke="#8B5CF6" stroke-width="1"/>
+    <line x1="170" y1="820" x2="200" y2="780" stroke="#06B6D4" stroke-width="1"/>
+
+    <circle cx="840" cy="840" r="6" fill="#3B82F6"/>
+    <circle cx="870" cy="780" r="4" fill="#8B5CF6"/>
+    <circle cx="790" cy="870" r="5" fill="#06B6D4"/>
+    <line x1="840" y1="840" x2="870" y2="780" stroke="#8B5CF6" stroke-width="1"/>
+    <line x1="840" y1="840" x2="790" y2="870" stroke="#06B6D4" stroke-width="1"/>
+
+    <!-- Side accents -->
+    <circle cx="100" cy="512" r="4" fill="#3B82F6"/>
+    <circle cx="924" cy="512" r="4" fill="#8B5CF6"/>
+  </g>
+
+  <!-- Main "R" Monogram - Centered and Large -->
+  <g filter="url(#rGlow)" transform="translate(512, 512)">
+    <!-- R shape centered at origin -->
+    <path
+      d="M-200 -260
+         L-200 260
+         L-130 260
+         L-130 80
+         L30 80
+         L140 260
+         L220 260
+         L95 60
+         C170 40 210 -30 210 -100
+         C210 -190 140 -260 30 -260
+         L-200 -260
+         Z
+         M-130 -190
+         L30 -190
+         C100 -190 135 -155 135 -100
+         C135 -45 100 0 30 0
+         L-130 0
+         L-130 -190
+         Z"
+      fill="url(#primaryGradient)"
+    />
+  </g>
+
+  <!-- AI Neural Node - Top right of R -->
+  <g filter="url(#nodeGlow)">
+    <circle cx="680" cy="380" r="20" fill="url(#aiGlowGradient)"/>
+    <circle cx="680" cy="380" r="10" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+
+  <!-- Secondary smaller nodes -->
+  <g filter="url(#nodeGlow)" opacity="0.7">
+    <circle cx="720" cy="440" r="8" fill="#06B6D4"/>
+    <circle cx="720" cy="440" r="4" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+
+  <!-- Decorative arc suggesting journey/path -->
+  <path
+    d="M720 500 Q 780 580 720 660"
+    stroke="url(#aiGlowGradient)"
+    stroke-width="6"
+    fill="none"
+    stroke-linecap="round"
+    opacity="0.5"
+  />
+
+  <!-- Motion trail dots -->
+  <circle cx="750" cy="540" r="5" fill="#06B6D4" opacity="0.6"/>
+  <circle cx="760" cy="600" r="4" fill="#3B82F6" opacity="0.5"/>
+  <circle cx="745" cy="650" r="3" fill="#8B5CF6" opacity="0.4"/>
+</svg>

@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "rydAI",
+    "slug": "rydai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "rydai",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mvubangsi.rydai"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#0A0E17"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.mvubangsi.rydai"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash.png",
+          "imageWidth": 400,
+          "resizeMode": "contain",
+          "backgroundColor": "#0A0E17"
+        }
+      ],
+      "expo-web-browser",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "rydAI uses your location to find nearby airports and suggest trip origins.",
+          "locationAlwaysPermission": "rydAI uses your location to find nearby airports and suggest trip origins.",
+          "locationWhenInUsePermission": "rydAI uses your location to find nearby airports and suggest trip origins."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

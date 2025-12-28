@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Primary Gradient -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+
+    <!-- AI Glow Gradient -->
+    <linearGradient id="aiGlowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4"/>
+      <stop offset="50%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#141821"/>
+      <stop offset="100%" style="stop-color:#0A0E17"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Outer Glow -->
+    <filter id="outerGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#3B82F6" flood-opacity="0.3"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#bgGradient)"/>
+
+  <!-- Neural Network Background Dots -->
+  <g opacity="0.15">
+    <!-- Top left cluster -->
+    <circle cx="80" cy="100" r="3" fill="#3B82F6"/>
+    <circle cx="120" cy="80" r="2" fill="#8B5CF6"/>
+    <circle cx="100" cy="140" r="2.5" fill="#06B6D4"/>
+
+    <!-- Top right cluster -->
+    <circle cx="420" cy="90" r="2.5" fill="#3B82F6"/>
+    <circle cx="440" cy="130" r="2" fill="#8B5CF6"/>
+    <circle cx="400" cy="110" r="3" fill="#06B6D4"/>
+
+    <!-- Bottom left cluster -->
+    <circle cx="90" cy="400" r="2" fill="#3B82F6"/>
+    <circle cx="130" cy="420" r="3" fill="#8B5CF6"/>
+    <circle cx="110" cy="380" r="2.5" fill="#06B6D4"/>
+
+    <!-- Bottom right cluster -->
+    <circle cx="410" cy="410" r="3" fill="#3B82F6"/>
+    <circle cx="430" cy="380" r="2" fill="#8B5CF6"/>
+    <circle cx="390" cy="430" r="2.5" fill="#06B6D4"/>
+
+    <!-- Connecting lines -->
+    <line x1="80" y1="100" x2="120" y2="80" stroke="#3B82F6" stroke-width="0.5" opacity="0.5"/>
+    <line x1="120" y1="80" x2="100" y2="140" stroke="#8B5CF6" stroke-width="0.5" opacity="0.5"/>
+    <line x1="420" y1="90" x2="400" y2="110" stroke="#3B82F6" stroke-width="0.5" opacity="0.5"/>
+    <line x1="90" y1="400" x2="130" y2="420" stroke="#8B5CF6" stroke-width="0.5" opacity="0.5"/>
+    <line x1="410" y1="410" x2="390" y2="430" stroke="#06B6D4" stroke-width="0.5" opacity="0.5"/>
+  </g>
+
+  <!-- Main "R" Monogram -->
+  <g filter="url(#outerGlow)">
+    <!-- R shape - geometric, modern -->
+    <path
+      d="M160 140
+         L160 372
+         L200 372
+         L200 290
+         L280 290
+         L340 372
+         L390 372
+         L320 280
+         C360 270 380 230 380 190
+         C380 140 340 100 280 100
+         L160 100
+         L160 140
+         Z
+         M200 140
+         L280 140
+         C320 140 340 160 340 190
+         C340 220 320 250 280 250
+         L200 250
+         L200 140
+         Z"
+      fill="url(#primaryGradient)"
+    />
+  </g>
+
+  <!-- AI Accent - Neural node on R -->
+  <g filter="url(#glow)">
+    <circle cx="340" cy="180" r="8" fill="url(#aiGlowGradient)"/>
+    <circle cx="340" cy="180" r="4" fill="#FFFFFF" opacity="0.8"/>
+  </g>
+
+  <!-- Decorative arc suggesting movement/journey -->
+  <path
+    d="M380 300 Q 420 350 380 400"
+    stroke="url(#aiGlowGradient)"
+    stroke-width="3"
+    fill="none"
+    stroke-linecap="round"
+    opacity="0.6"
+  />
+
+  <!-- Small accent dots -->
+  <circle cx="395" cy="320" r="3" fill="#06B6D4" opacity="0.8"/>
+  <circle cx="400" cy="380" r="2" fill="#8B5CF6" opacity="0.6"/>
+</svg>

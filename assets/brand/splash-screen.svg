@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1284" height="2778" viewBox="0 0 1284 2778" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Primary Gradient -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+
+    <!-- AI Glow Gradient -->
+    <linearGradient id="aiGlowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4"/>
+      <stop offset="50%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0E17"/>
+      <stop offset="50%" style="stop-color:#0F1420"/>
+      <stop offset="100%" style="stop-color:#0A0E17"/>
+    </linearGradient>
+
+    <!-- Radial glow -->
+    <radialGradient id="centerGlow" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#0A0E17;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle Glow -->
+    <filter id="subtleGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Strong Glow for nodes -->
+    <filter id="nodeGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1284" height="2778" fill="url(#bgGradient)"/>
+
+  <!-- Center glow -->
+  <rect width="1284" height="2778" fill="url(#centerGlow)"/>
+
+  <!-- Neural Network Background Pattern - scattered across screen -->
+  <g opacity="0.08">
+    <!-- Top region -->
+    <circle cx="200" cy="300" r="4" fill="#3B82F6"/>
+    <circle cx="280" cy="250" r="3" fill="#8B5CF6"/>
+    <circle cx="240" cy="380" r="3.5" fill="#06B6D4"/>
+    <line x1="200" y1="300" x2="280" y2="250" stroke="#3B82F6" stroke-width="1"/>
+    <line x1="200" y1="300" x2="240" y2="380" stroke="#06B6D4" stroke-width="1"/>
+
+    <circle cx="1050" cy="320" r="3.5" fill="#3B82F6"/>
+    <circle cx="1100" cy="280" r="3" fill="#8B5CF6"/>
+    <circle cx="1020" cy="400" r="4" fill="#06B6D4"/>
+    <line x1="1050" y1="320" x2="1100" y2="280" stroke="#8B5CF6" stroke-width="1"/>
+    <line x1="1050" y1="320" x2="1020" y2="400" stroke="#3B82F6" stroke-width="1"/>
+
+    <!-- Middle region -->
+    <circle cx="120" cy="1200" r="3" fill="#3B82F6"/>
+    <circle cx="180" cy="1150" r="4" fill="#8B5CF6"/>
+    <circle cx="150" cy="1280" r="3.5" fill="#06B6D4"/>
+    <line x1="120" y1="1200" x2="180" y2="1150" stroke="#3B82F6" stroke-width="1"/>
+    <line x1="120" y1="1200" x2="150" y2="1280" stroke="#06B6D4" stroke-width="1"/>
+
+    <circle cx="1150" cy="1180" r="4" fill="#3B82F6"/>
+    <circle cx="1100" cy="1250" r="3" fill="#8B5CF6"/>
+    <circle cx="1180" cy="1300" r="3.5" fill="#06B6D4"/>
+    <line x1="1150" y1="1180" x2="1100" y2="1250" stroke="#8B5CF6" stroke-width="1"/>
+    <line x1="1150" y1="1180" x2="1180" y2="1300" stroke="#06B6D4" stroke-width="1"/>
+
+    <!-- Bottom region -->
+    <circle cx="180" cy="2400" r="3.5" fill="#3B82F6"/>
+    <circle cx="250" cy="2350" r="3" fill="#8B5CF6"/>
+    <circle cx="220" cy="2480" r="4" fill="#06B6D4"/>
+    <line x1="180" y1="2400" x2="250" y2="2350" stroke="#3B82F6" stroke-width="1"/>
+    <line x1="180" y1="2400" x2="220" y2="2480" stroke="#06B6D4" stroke-width="1"/>
+
+    <circle cx="1080" cy="2420" r="4" fill="#3B82F6"/>
+    <circle cx="1020" cy="2380" r="3.5" fill="#8B5CF6"/>
+    <circle cx="1100" cy="2500" r="3" fill="#06B6D4"/>
+    <line x1="1080" y1="2420" x2="1020" y2="2380" stroke="#8B5CF6" stroke-width="1"/>
+    <line x1="1080" y1="2420" x2="1100" y2="2500" stroke="#06B6D4" stroke-width="1"/>
+  </g>
+
+  <!-- Main Logo Group - Centered -->
+  <g transform="translate(642, 1200)">
+    <!-- R Monogram with glow -->
+    <g filter="url(#glow)">
+      <path
+        d="M-160 -210
+           L-160 210
+           L-100 210
+           L-100 70
+           L30 70
+           L120 210
+           L190 210
+           L85 55
+           C150 40 185 -15 185 -80
+           C185 -160 125 -210 30 -210
+           L-160 -210
+           Z
+           M-100 -150
+           L30 -150
+           C90 -150 120 -120 120 -80
+           C120 -40 90 -5 30 -5
+           L-100 -5
+           L-100 -150
+           Z"
+        fill="url(#primaryGradient)"
+      />
+    </g>
+
+    <!-- AI Neural Node -->
+    <g filter="url(#nodeGlow)">
+      <circle cx="155" cy="-100" r="16" fill="url(#aiGlowGradient)"/>
+      <circle cx="155" cy="-100" r="8" fill="#FFFFFF" opacity="0.9"/>
+    </g>
+
+    <!-- Secondary node -->
+    <g filter="url(#subtleGlow)" opacity="0.8">
+      <circle cx="185" cy="-50" r="7" fill="#06B6D4"/>
+      <circle cx="185" cy="-50" r="3.5" fill="#FFFFFF" opacity="0.8"/>
+    </g>
+
+    <!-- Motion arc -->
+    <path
+      d="M195 0 Q 240 60 195 120"
+      stroke="url(#aiGlowGradient)"
+      stroke-width="5"
+      fill="none"
+      stroke-linecap="round"
+      opacity="0.5"
+    />
+
+    <!-- Trail dots -->
+    <circle cx="220" cy="30" r="4" fill="#06B6D4" opacity="0.6"/>
+    <circle cx="230" cy="80" r="3" fill="#3B82F6" opacity="0.5"/>
+    <circle cx="215" cy="115" r="2.5" fill="#8B5CF6" opacity="0.4"/>
+  </g>
+
+  <!-- Wordmark below logo -->
+  <g transform="translate(642, 1520)">
+    <!-- "ryd" text -->
+    <text
+      x="-140"
+      y="0"
+      font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
+      font-size="72"
+      font-weight="600"
+      letter-spacing="-1"
+      fill="#F9FAFB"
+      text-anchor="start"
+    >ryd</text>
+
+    <!-- "AI" text with gradient -->
+    <text
+      x="60"
+      y="0"
+      font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
+      font-size="64"
+      font-weight="700"
+      letter-spacing="0"
+      fill="url(#primaryGradient)"
+      filter="url(#subtleGlow)"
+      text-anchor="start"
+    >AI</text>
+  </g>
+
+  <!-- Tagline -->
+  <text
+    x="642"
+    y="1620"
+    font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
+    font-size="16"
+    font-weight="400"
+    letter-spacing="4"
+    fill="#6B7280"
+    text-anchor="middle"
+  >INTELLIGENT TRAVEL COMPANION</text>
+</svg>

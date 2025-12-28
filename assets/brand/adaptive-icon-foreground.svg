@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Android Adaptive Icon Foreground - 108dp (432px at mdpi x4 = 1728px safe area) -->
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Primary Gradient -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+
+    <!-- AI Glow Gradient -->
+    <linearGradient id="aiGlowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06B6D4"/>
+      <stop offset="50%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Safe zone is 66dp centered = ~624px centered in 1024 -->
+  <!-- Content should fit within center 624px area -->
+
+  <!-- Main "R" Monogram -->
+  <g filter="url(#glow)" transform="translate(512, 512)">
+    <path
+      d="M-180 -230
+         L-180 230
+         L-120 230
+         L-120 70
+         L20 70
+         L120 230
+         L190 230
+         L80 55
+         C145 38 180 -20 180 -85
+         C180 -165 120 -230 20 -230
+         L-180 -230
+         Z
+         M-120 -170
+         L20 -170
+         C80 -170 110 -140 110 -85
+         C110 -35 80 0 20 0
+         L-120 0
+         L-120 -170
+         Z"
+      fill="url(#primaryGradient)"
+    />
+  </g>
+
+  <!-- AI Neural Node -->
+  <g filter="url(#glow)">
+    <circle cx="650" cy="350" r="18" fill="url(#aiGlowGradient)"/>
+    <circle cx="650" cy="350" r="9" fill="#FFFFFF" opacity="0.9"/>
+  </g>
+
+  <!-- Secondary node -->
+  <circle cx="685" cy="405" r="7" fill="#06B6D4" opacity="0.8"/>
+  <circle cx="685" cy="405" r="3.5" fill="#FFFFFF" opacity="0.7"/>
+
+  <!-- Motion arc -->
+  <path
+    d="M690 450 Q 740 520 690 590"
+    stroke="url(#aiGlowGradient)"
+    stroke-width="5"
+    fill="none"
+    stroke-linecap="round"
+    opacity="0.4"
+  />
+</svg>
